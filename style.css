@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+.contener{
+    background-color: rgb(33, 34, 34);
+    width: 20%;
+    border-radius: 20px;
+    padding: 20px;
+}
+.avatar{
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    border-radius: 50%;
+}
+h2,h3,p{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    color: greenyellow;
+    font-size: 12px;
+}
+p{
+    font-size: 10px;
+    margin: 25px;
+}
+button{
+    width: 90%;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 15px;
+    background-color: rgb(51, 52, 52);
+    color: white;
+}
