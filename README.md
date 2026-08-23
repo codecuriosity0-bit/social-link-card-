@@ -1,6 +1,6 @@
 ## Social link profile
 ##the project link :
-Project[project link](https://codecuriosity0-bit.github.io/social-link-card-/)
+ [ the project link](https://codecuriosity0-bit.github.io/social-link-card-/)
 # Product by CODE&CURIOSITY
 # The technologies :
 ## HTML 
