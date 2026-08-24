@@ -1,52 +1,65 @@
-:root{
-    --pg-background:black;
-    --pg-color:white;
-    --cnt-background:rgb (33, 34, 34);
-    --h3-color:greenyellow;
+:root {
+  --pg-background: black;
+  --pg-color: white;
+  --cnt-background: rgb(33, 34, 34);
+  --h3-color: greenyellow;
 }
-body{
-    background-color: var (--pg-background);
-    color: var (--pg-color);
-    display: flex;
-    height: 90 vh;
-    align-items: center;
-    justify-content: center;
+
+body {
+  background-color: var(--pg-background);
+  color: var(--pg-color);
+  display: flex;
+  min-height: 100vh; /* Utiliser min-height au lieu d'une hauteur fixe évite de couper le contenu */
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
-.contener{
-    background-color: var (--cnt-background);
-    width: clamp (200 px, 20 %, 400 px);
-    border-radius: 20 px;
-    padding: 20 px;
+
+.contener {
+  background-color: var(--cnt-background);
+  /* Suppression de l'espace dans clamp() et correction des unités */
+  width: clamp(200px, 90%, 400px); /* 90% est recommandé pour le mobile plutôt que 20% */
+  border-radius: 20px;
+  padding: 20px;
 }
-.avatar{
-    display: block;
-    margin: 0 auto;
-    width: 80 px;
-    border-radius: 50 %;
+
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  border-radius: 50%;
 }
-h1,h3,p{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+h1, h3, p {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-h1{
-    font-size: 20 px;
+
+h1 {
+  /* Typographie fluide : varie selon la taille de l'écran tout en restant dans des bornes lisibles */
+  font-size: clamp(1.25rem, 4vw, 1.75rem); 
+  margin-top: 15px;
 }
-h3{
-    color: var (--h3-color);
-    font-size: 12 px;
+
+h3 {
+  color: var(--h3-color);
+  font-size: 0.85rem;
 }
-p{
-    font-size: 10 px;
-    margin: 25 px;
+
+p {
+  font-size: 0.9rem;
+  margin: 20px 0;
 }
-button{
-    width: 90 %;
-    height: 40 px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5 px;
-    border: 0 px;
-    font-size: 15 px;
-    background-color: rgb (51, 52, 52);
-    color: var (--pg-color);
+
+button {
+  width: 100%; /* S'adapte proprement à l'intérieur du conteneur */
+  height: 40px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 0;
+  font-size: 15px;
+  background-color: rgb(51, 52, 52);
+  color: var(--pg-color);
+  cursor: pointer;
 }
