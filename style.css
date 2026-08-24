@@ -2,14 +2,14 @@
   /* Couleurs */
   --pg-background: black;
   --pg-color: white;
-  --cnt-background: rgb (33, 34, 34);
-  --btn-background: rgb (51, 52, 52); /* Centralisation de la couleur du bouton */
-  --h2-color: greenyellow;
+  --cnt-background: rgb(33, 34, 34);
+  --btn-background: rgb(51, 52, 52);
+  --h3-color: greenyellow;
 
-  /* Espacements & Rayons */
-  --border-radius-card: 20px;
-  --border-radius-btn: 5px;
-  --padding-card: 20px;
+  /* Espacements & Rayons en rem */
+  --border-radius-card: 1.25rem;
+  --border-radius-btn: 0.3125rem;
+  --padding-card: 1.25rem;
 
   /* Typographie */
   --font-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -27,15 +27,16 @@ body {
 
 .contener {
   background-color: var(--cnt-background);
-  width: clamp(280px, 90%, 400px);
+  /* Correction : rem au lieu de px */
+  width: clamp(17.5rem, 90%, 25rem);
   border-radius: var(--border-radius-card);
   padding: var(--padding-card);
 }
 
 .avatar {
   display: block;
-  margin: 0 auto;
-  width: 80px;
+  margin-inline: auto;
+  width: 5rem;
   border-radius: 50%;
 }
 
@@ -46,31 +47,33 @@ h1, h2, p {
 
 h1 {
   font-size: clamp(1.2rem, 4vw, 1.75rem);
-  margin-top: 15px;
-  margin-bottom: 5px;
+  /* Correction : propriétés logiques et fonctions réactives */
+  margin-block-start: clamp(0.75rem, 2vw, 1rem);
+  margin-block-end: clamp(0.25rem, 1vw, 0.5rem);
 }
 
 h2 {
   color: var(--h3-color);
   font-size: 0.85rem;
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 p {
   font-size: 0.9rem;
-  margin: 20px 0;
+  margin-block: clamp(1rem, 3vw, 1.25rem);
   line-height: 1.4;
 }
 
 button {
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   display: block;
-  margin: 10px auto;
+  margin-inline: auto;
+  margin-block: 0.625rem;
   border-radius: var(--border-radius-btn);
   border: 0;
-  font-size: 15px;
-  background-color: var(--btn-background); /* Utilisation de la variable */
+  font-size: 0.9375rem;
+  background-color: var(--btn-background);
   color: var(--pg-color);
   cursor: pointer;
 }
