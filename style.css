@@ -1,15 +1,25 @@
 :root {
+  /* Couleurs */
   --pg-background: black;
   --pg-color: white;
   --cnt-background: rgb(33, 34, 34);
+  --btn-background: rgb(51, 52, 52); /* Centralisation de la couleur du bouton */
   --h3-color: greenyellow;
+
+  /* Espacements & Rayons */
+  --border-radius-card: 20px;
+  --border-radius-btn: 5px;
+  --padding-card: 20px;
+
+  /* Typographie */
+  --font-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
   background-color: var(--pg-background);
   color: var(--pg-color);
   display: flex;
-  min-height: 100vh; /* Utiliser min-height au lieu d'une hauteur fixe évite de couper le contenu */
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -17,10 +27,9 @@ body {
 
 .contener {
   background-color: var(--cnt-background);
-  /* Suppression de l'espace dans clamp() et correction des unités */
-  width: clamp(200px, 90%, 400px); /* 90% est recommandé pour le mobile plutôt que 20% */
-  border-radius: 20px;
-  padding: 20px;
+  width: clamp(280px, 90%, 400px);
+  border-radius: var(--border-radius-card);
+  padding: var(--padding-card);
 }
 
 .avatar {
@@ -32,34 +41,36 @@ body {
 
 h1, h3, p {
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--font-main);
 }
 
 h1 {
-  /* Typographie fluide : varie selon la taille de l'écran tout en restant dans des bornes lisibles */
-  font-size: clamp(1.25rem, 4vw, 1.75rem); 
+  font-size: clamp(1.2rem, 4vw, 1.75rem);
   margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 h3 {
   color: var(--h3-color);
   font-size: 0.85rem;
+  margin-top: 0;
 }
 
 p {
   font-size: 0.9rem;
   margin: 20px 0;
+  line-height: 1.4;
 }
 
 button {
-  width: 100%; /* S'adapte proprement à l'intérieur du conteneur */
+  width: 100%;
   height: 40px;
   display: block;
   margin: 10px auto;
-  border-radius: 5px;
+  border-radius: var(--border-radius-btn);
   border: 0;
   font-size: 15px;
-  background-color: rgb(51, 52, 52);
+  background-color: var(--btn-background); /* Utilisation de la variable */
   color: var(--pg-color);
   cursor: pointer;
 }
