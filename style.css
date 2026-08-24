@@ -6,7 +6,7 @@
   --btn-background: rgb(51, 52, 52);
   --h3-color: greenyellow;
 
-  /* Espacements & Rayons en rem */
+  /* Espacements & Rayons */
   --border-radius-card: 1.25rem;
   --border-radius-btn: 0.3125rem;
   --padding-card: 1.25rem;
@@ -27,7 +27,6 @@ body {
 
 .contener {
   background-color: var(--cnt-background);
-  /* Correction : rem au lieu de px */
   width: clamp(17.5rem, 90%, 25rem);
   border-radius: var(--border-radius-card);
   padding: var(--padding-card);
@@ -40,26 +39,27 @@ body {
   border-radius: 50%;
 }
 
-h1, h2, p {
+h1, h3, p {
   text-align: center;
   font-family: var(--font-main);
 }
 
 h1 {
   font-size: clamp(1.2rem, 4vw, 1.75rem);
-  /* Correction : propriétés logiques et fonctions réactives */
   margin-block-start: clamp(0.75rem, 2vw, 1rem);
   margin-block-end: clamp(0.25rem, 1vw, 0.5rem);
 }
 
-h2 {
+h3 {
   color: var(--h3-color);
-  font-size: 0.85rem;
+  /* Correction : font-size avec clamp() pour remplacer le 0.85rem fixe */
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   margin-block-start: 0;
 }
 
 p {
-  font-size: 0.9rem;
+  /* Correction : font-size avec clamp() pour remplacer le 0.9rem fixe */
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
   margin-block: clamp(1rem, 3vw, 1.25rem);
   line-height: 1.4;
 }
@@ -72,7 +72,8 @@ button {
   margin-block: 0.625rem;
   border-radius: var(--border-radius-btn);
   border: 0;
-  font-size: 0.9375rem;
+  /* Correction : font-size avec clamp() pour le bouton */
+  font-size: clamp(0.875rem, 2vw, 1rem);
   background-color: var(--btn-background);
   color: var(--pg-color);
   cursor: pointer;
