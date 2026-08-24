@@ -14,7 +14,7 @@ body{
 }
 .contener{
     background-color: var (--cnt-background);
-    width: 20 %;
+    width: clamp (200 px, 20 %, 400 px);
     border-radius: 20 px;
     padding: 20 px;
 }
