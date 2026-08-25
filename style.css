@@ -69,7 +69,7 @@ button {
   height: 2.5rem;
   display: block;
   margin-inline: auto;
-  margin-block: clamp (0.5rem, 2vw, 1rem);
+  margin-block: clamp(0.5rem, 2vw, 1rem);
   border-radius: var(--border-radius-btn);
   border: 0;
   /* Correction : font-size avec clamp() pour le bouton */
